@@ -41,7 +41,6 @@ const Footer = () => {
             <li>Cookie Policy</li>
             <li>Privacy Policy</li>
             <li>Investor Relations</li>
-            <li>Life at Swiggy</li>
           </ul>
         </div>
 

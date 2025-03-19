@@ -6,6 +6,8 @@ import Menu from "../components/Menu";
 import Navbar from "../components/Navbar";
 import RestaurantList from "../components/RestaurantList";
 import TasteDifference from "../components/TasteDifference";
+import CustomerFeedback from "../components/CustomerFeedback";
+import CateringOrder from "../components/CateringOrder";
 
 const Home = () => {
   return (
@@ -16,7 +18,9 @@ const Home = () => {
       <TasteDifference />
       <RestaurantList />
        <Menu/>
-      {/* <Footer/> */}
+       <CustomerFeedback/>
+       <CateringOrder/>
+      <Footer/>
 
     </div>
   );

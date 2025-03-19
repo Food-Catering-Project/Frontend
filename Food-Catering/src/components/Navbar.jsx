@@ -6,7 +6,9 @@ import { FaSearch, FaUser, FaShoppingCart, FaGift, FaQuestionCircle, FaBuilding,
 import { IoMdMore } from "react-icons/io";
 import { useState, useEffect } from "react";
 import AuthSidebar from "./AuthSidebar";
-import FoodCateringLogo from "../assets/Food-Catering logo.jpg";
+// import FoodCateringLogo from "../assets/Food-Catering logo.jpg";
+import FoodCateringLogo from "../assets/FoodCateringLogo.png";
+
 
 const Navbar = () => {
     const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -26,7 +28,7 @@ const Navbar = () => {
                 <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
                     {/* Left Side: Logo & Search */}
                     <div className="flex items-center space-x-4">
-                        <img src={FoodCateringLogo} alt="Food Catering Logo" className="h-10 w-auto rounded-lg" />
+                        <img src={FoodCateringLogo} alt="Food Catering Logo" className="h-15 w-auto rounded-lg" />
                         <h1 className="text-2xl font-bold text-orange-500">Food Catering</h1>
                     </div>
 

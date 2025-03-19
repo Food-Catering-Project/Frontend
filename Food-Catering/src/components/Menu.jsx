@@ -1,19 +1,30 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import vaggieBurger from "../assets/DeliciousMenu/VeggieBurger.jpg"
+import VeggiePizza from "../assets/DeliciousMenu/VeggiePizza.jpg"
+import ChickenBiryani from "../assets/DeliciousMenu/ChickenBiryani.jpg"
+import GrilledChickenSalad from "../assets/DeliciousMenu/GrilledChickenSalad.jpg" 
+import Cheeseburger from "../assets/DeliciousMenu/Cheeseburger.jpg"
+import ButterNaan from "../assets/DeliciousMenu/ButterNaan.png"
+import TandooriChicken from "../assets/DeliciousMenu/TandooriChicken.jpg"
+import ChocolateBrownie from "../assets/DeliciousMenu/ChocolateBrownie.jpg"
+import ColdCoffee from "../assets/DeliciousMenu/ColdCoffee.jpeg"
 
 
 const menuImages = {
-    1: "../assets/DeliciousMenu/ButterNaan.png",
-    2: "../assets/DeliciousMenu/Cheeseburger.jpg",
-    4: "../assets/DeliciousMenu/ChickenBiryani.jpg",
-    5: "../assets/DeliciousMenu/ChocolateBrownie.jpg",
-    6: "../assets/DeliciousMenu/ColdCoffee.jpeg",
-    7: "../assets/DeliciousMenu/GrilledChickenSalad.jpg",
-    8: "../assets/DeliciousMenu/TandooriChicken.jpg",
-    9: "../assets/DeliciousMenu/VeggieBurger.jpg",
-    10: "../assets/DeliciousMenu/VeggiePizza.jpg"
+    1: vaggieBurger,
+    2: VeggiePizza,
+    4: ChickenBiryani,
+    5: GrilledChickenSalad,
+    6: Cheeseburger,
+    7: ButterNaan,
+    8: TandooriChicken,
+    9: ChocolateBrownie,
+    10: ColdCoffee
   };
-
+ 
+  
+ 
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -65,7 +76,7 @@ const fetchMenu = async () => {
               className="bg-white shadow-lg rounded-lg overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-2xl"
             >
               <img
-                src={item.imageUrl}
+                src={menuImages[item.menuId]}
                 alt={item.name}
                 className="w-full h-48 object-cover"
               />
@@ -77,9 +88,9 @@ const fetchMenu = async () => {
                   <span className="text-lg font-bold text-green-600">
                   ₹{item.price?.toFixed(2)}
                   </span>
-                  <button className="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600 transition">
+                  {/* <button className="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600 transition">
                     Order Now
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
