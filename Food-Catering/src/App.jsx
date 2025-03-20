@@ -9,6 +9,9 @@ import HousePartyCatering from "./pages/HousePartyCatering";
 import BirthdayPartyCatering from "./pages/BirthdayPartyCatering";
 import CorporateCatering from "./pages/CorporateCatering";
 import AnyOtherOccasion from "./pages/AnyOtherOccasion";
+import AboutUs from "./pages/AboutUs";
+import Offer from "./pages/Offer";
+import RestaurantRegister from "./pages/Admin/RestaurantRegister";
 
 function App() {
   return (
@@ -16,6 +19,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/help" element={<Help />} />
+        <Route path='/aboutus' element={<AboutUs/>}/>
+        <Route path="/offer" element={<Offer />} />
+        <Route path="/restaurant-register" element={<RestaurantRegister/>}/>
         <Route path="/wedding-catering" element={<WeddingCatering />} />
         <Route path="/bulk-food-delivery" element={<BulkFoodDelivery />} />
         <Route path="/house-party-catering" element={<HousePartyCatering />} />
