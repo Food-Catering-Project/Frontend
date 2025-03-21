@@ -36,7 +36,7 @@ const AboutUs = () => {
             30 Years Of Experience in Catering Services
           </h2>
           <p>
-            Food Caterers is an expert outdoor catering service provider in Hyderabad.
+            Food Caterers is an expert outdoor catering service provider in Pune & Hyderabad.
             We serve events from small to large crowds with the most comfortable buffet setups 
             at your location. Be it a family reunion, colleagues gathering, family function, 
             Indian wedding, birthday, housewarming, cradle ceremony, anniversaries, we are just a call away. 
