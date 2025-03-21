@@ -1,61 +1,116 @@
 
 
-  
-
 import { useState } from "react";
 
 const Help = () => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const faqData = [
+    // 📌 Section: User Help & Support
     {
-      category: "Orders & Delivery",
+      category: "User Help & Support",
       questions: [
         { 
-          question: "How can I track my order?", 
-          answer: "You can track your order from the 'My Orders' section after logging in." 
+          question: "How do I place an order?", 
+          answer: "Browse restaurants, select items, add them to your cart, and proceed to checkout to place your order." 
         },
         { 
-          question: "What if my food is delayed?", 
-          answer: "If your order is delayed, you can contact the delivery partner via the 'Track Order' page." 
+          question: "How do I track my order?", 
+          answer: "Go to 'My Orders' in your profile to track your current order in real time." 
         },
         { 
-          question: "How do I cancel my order?", 
-          answer: "Go to 'My Orders', select the order, and click 'Cancel Order' before preparation starts." 
+          question: "What if my order is delayed?", 
+          answer: "If your order is delayed, check the 'Track Order' page for real-time updates or contact support." 
         },
-      ],
-    },
-    {
-      category: "Payments & Refunds",
-      questions: [
+        { 
+          question: "How do I cancel an order?", 
+          answer: "You can cancel your order from the 'My Orders' section before preparation starts." 
+        },
+        { 
+          question: "How do I request a refund?", 
+          answer: "Refunds are processed automatically if an order is canceled before preparation. Contact support for refund issues." 
+        },
         { 
           question: "What payment methods are accepted?", 
           answer: "We accept credit/debit cards, UPI, wallets, and cash on delivery (COD)." 
         },
         { 
-          question: "How do I get a refund?", 
-          answer: "Refunds are processed within 3-5 business days based on the payment method used." 
-        },
-        { 
-          question: "Why was my payment declined?", 
-          answer: "Check if your bank allows online transactions or try using a different payment method." 
-        },
-      ],
-    },
-    {
-      category: "Account & Support",
-      questions: [
-        { 
           question: "How do I reset my password?", 
-          answer: "Click on 'Forgot Password' on the login page and follow the instructions." 
+          answer: "Click on 'Forgot Password' on the login page and follow the steps to reset your password." 
         },
         { 
           question: "How can I contact customer support?", 
           answer: "You can reach our support team via chat or call from the 'Help' section in the app." 
         },
+      ],
+    },
+
+    // 📌 Section: Restaurant Help & Support (Admin Side)
+    {
+      category: "Restaurant Registration",
+      questions: [
         { 
-          question: "How do I delete my account?", 
-          answer: "To delete your account, go to 'Account Settings' and request account deletion." 
+          question: "How can I register my restaurant?", 
+          answer: "Visit the 'Partner with Us' page and fill out the registration form with the required details." 
+        },
+        { 
+          question: "What documents are required for registration?", 
+          answer: "You need an FSSAI license, PAN card, GSTIN (if applicable), bank details, and your restaurant menu." 
+        },
+        { 
+          question: "How long does the approval process take?", 
+          answer: "The approval process usually takes 24-48 hours after you submit all required documents." 
+        },
+      ],
+    },
+    {
+      category: "Order Management (For Restaurants)",
+      questions: [
+        { 
+          question: "How do I accept or decline an order?", 
+          answer: "Manage orders through the Food Catering Partner Dashboard or the Owner App." 
+        },
+        { 
+          question: "What happens if a customer cancels an order?", 
+          answer: "If canceled before preparation, no charges apply. If already prepared, refund policies apply." 
+        },
+        { 
+          question: "How do I update my restaurant menu?", 
+          answer: "Log in to your partner dashboard, go to 'Manage Menu,' and update your items and prices." 
+        },
+      ],
+    },
+    {
+      category: "Payments & Payouts (For Restaurants)",
+      questions: [
+        { 
+          question: "How do I receive payments for orders?", 
+          answer: "Payments are credited to your registered bank account weekly, with a detailed transaction summary." 
+        },
+        { 
+          question: "What are the commission charges?", 
+          answer: "Food Catering charges a commission based on your agreement. The percentage depends on location and restaurant type." 
+        },
+        { 
+          question: "How do I check my earnings?", 
+          answer: "You can view earnings in the 'Reports' section of the Partner Dashboard." 
+        },
+      ],
+    },
+    {
+      category: "Delivery & Support (For Restaurants)",
+      questions: [
+        { 
+          question: "How does Food Catering assign delivery partners?", 
+          answer: "Our system automatically assigns the nearest available delivery partner to ensure fast delivery." 
+        },
+        { 
+          question: "What if a delivery partner is late?", 
+          answer: "You can track the delivery partner’s location via the Partner Dashboard. If there’s an issue, contact support." 
+        },
+        { 
+          question: "How do I contact support?", 
+          answer: "You can reach our support team via the 'Help' section in the Partner Dashboard or call our support line." 
         },
       ],
     },

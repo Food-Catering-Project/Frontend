@@ -10,7 +10,6 @@ import TandooriChicken from "../assets/DeliciousMenu/TandooriChicken.jpg"
 import ChocolateBrownie from "../assets/DeliciousMenu/ChocolateBrownie.jpg"
 import ColdCoffee from "../assets/DeliciousMenu/ColdCoffee.jpeg"
 
-
 const menuImages = {
     1: vaggieBurger,
     2: VeggiePizza,
@@ -21,43 +20,43 @@ const menuImages = {
     8: TandooriChicken,
     9: ChocolateBrownie,
     10: ColdCoffee
-  };
- 
-  
- 
+};
+
 const Menu = () => {
   const [menuItems, setMenuItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     console.log("Fetching menu data...");
     fetchMenu();
   }, []);
 
-const fetchMenu = async () => {
+  const fetchMenu = async () => {
     try {
       const response = await axios.get("http://localhost:8003/query/api/menu/getAllMenu");
-  
-      console.log("API Response:", response.data); // Log only response.data
-  
-      // ✅ Fix: Ensure we correctly extract the menu items array
+      console.log("API Response:", response.data);
       if (response.data?.data && Array.isArray(response.data.data)) {
         setMenuItems(response.data.data);
       } else {
         console.error("Unexpected API response format:", response.data);
-        setMenuItems([]); // Empty list to prevent crash
+        setMenuItems([]);
       }
     } catch (error) {
       console.error("Error fetching menu:", error);
-      setMenuItems([]); // Prevent crashing if API fails
+      setError("Failed to load menu items. Please try again later.");
+      setMenuItems([]);
     } finally {
       setLoading(false);
     }
   };
-  
 
   if (loading) {
     return <p className="text-center text-gray-500">Loading Menus...</p>;
+  }
+
+  if (error) {
+    return <p className="text-center text-red-500">{error}</p>;
   }
 
   return (
@@ -86,11 +85,8 @@ const fetchMenu = async () => {
                 <p className="text-gray-700 text-sm">{item.description}</p>
                 <div className="mt-3 flex justify-between items-center">
                   <span className="text-lg font-bold text-green-600">
-                  ₹{item.price?.toFixed(2)}
+                    ₹{item.price?.toFixed(2)}
                   </span>
-                  {/* <button className="bg-green-500 text-white px-3 py-1 rounded-md hover:bg-green-600 transition">
-                    Order Now
-                  </button> */}
                 </div>
               </div>
             </div>
@@ -100,6 +96,5 @@ const fetchMenu = async () => {
     </div>
   );
 };
-
 
 export default Menu;

@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
@@ -9,6 +7,7 @@ import { FcRating } from "react-icons/fc";
 const RestaurantList = () => {
     const [restaurants, setRestaurants] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
     const scrollRef = useRef(null);
 
     useEffect(() => {
@@ -23,6 +22,7 @@ const RestaurantList = () => {
                 }
             } catch (error) {
                 console.error("Error fetching restaurants:", error);
+                setError("Failed to load restaurants. Please try again later.");
                 setRestaurants([]);
             } finally {
                 setLoading(false);
@@ -47,6 +47,10 @@ const RestaurantList = () => {
 
     if (loading) {
         return <p className="text-center text-gray-500">Loading restaurants...</p>;
+    }
+
+    if (error) {
+        return <p className="text-center text-red-500">{error}</p>;
     }
 
     return (
