@@ -27,6 +27,10 @@ const CateringOrder = () => {
       console.log("Response:", response.data);
       setMessage("Catering order request sent successfully!");
       setFormData({ noOfPerson: "", email: "", date: "", phoneNo: "" });
+
+      setTimeout(() => {
+        setMessage("");
+      }, 5000);
     } catch (error) {
       console.error("Error:", error);
       setMessage("Failed to send the catering order request.");
