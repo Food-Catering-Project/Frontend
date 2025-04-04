@@ -33,7 +33,7 @@ const Navbar = () => {
                     {/* Left Side: Logo & Search */}
                     <div className="flex items-center space-x-4">
                         <img src={FoodCateringLogo} alt="Food Catering Logo" className="h-15 w-auto rounded-lg" />
-                        <h1 className="text-2xl font-bold text-orange-500">Food Catering</h1>
+                        <h1 className="text-2xl font-bold text-orange-500 font-serif">Food Catering</h1>
                     </div>
 
                     {/* Search Bar (Hidden on Small Screens)
@@ -54,10 +54,10 @@ const Navbar = () => {
                     {/* Desktop Menu */}
                     <ul className="hidden md:flex items-center space-x-6 text-gray-700">
 
-                        <li className="flex items-center space-x-1 cursor-pointer hover:text-orange-500">
+                        {/* <li className="flex items-center space-x-1 cursor-pointer hover:text-orange-500">
                             <FaUserShield />
                             <Link to="/restaurant-register" className="text-gray-700 hover:text-orange-500"> Admin</Link>
-                        </li>
+                        </li> */}
 
                         <li className="flex items-center space-x-1 cursor-pointer hover:text-orange-500">
                             <FaInfoCircle />
@@ -91,11 +91,11 @@ const Navbar = () => {
                 {menuOpen && (
                     <div className="md:hidden bg-white shadow-md p-4 absolute top-full left-0 w-full z-10">
                         <ul className="flex flex-col space-y-4 text-gray-700">
-
+{/* 
                             <li className="flex items-center space-x-1 cursor-pointer hover:text-orange-500">
                                 <FaUserShield />
                                 <Link to="/restaurant-register" className="text-gray-700 hover:text-orange-500"> Admin</Link>
-                            </li>
+                            </li> */}
 
 
                             <li className="flex items-center space-x-2 cursor-pointer hover:text-orange-500">
