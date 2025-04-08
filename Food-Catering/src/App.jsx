@@ -12,6 +12,7 @@ import AnyOtherOccasion from "./pages/AnyOtherOccasion";
 import AboutUs from "./pages/AboutUs";
 import Offer from "./pages/Offer";
 import RestaurantRegister from "./pages/Admin/RestaurantRegister";
+import RestaurantDetails from "./components/RestaurantsFetched/RestaurantDetails";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/help" element={<Help />} />
         <Route path='/aboutus' element={<AboutUs/>}/>
         <Route path="/offer" element={<Offer />} />
+        <Route path="/restaurant-details/:id" element={<RestaurantDetails />} />
         <Route path="/restaurant-register" element={<RestaurantRegister/>}/>
         <Route path="/wedding-catering" element={<WeddingCatering />} />
         <Route path="/bulk-food-delivery" element={<BulkFoodDelivery />} />
