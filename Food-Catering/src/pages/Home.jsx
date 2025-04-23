@@ -9,6 +9,7 @@ import RestaurantFinalList from "../components/RestaurantsFetched/RestaurantFina
 import TasteDifference from "../components/TasteDifference";
 import CustomerFeedback from "../components/CustomerFeedback";
 import CateringOrder from "../components/CateringOrder";
+import MapComponent from "../components/MapComponent";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
        <RestaurantFinalList/>
        <CustomerFeedback/>
        <CateringOrder/>
+       <MapComponent/>
       <Footer/>
 
     </div>

@@ -234,6 +234,7 @@ const AuthSidebar = ({ isOpen, onClose }) => {
             console.log(response, "response");
 
             localStorage.setItem("token", response.data);
+            localStorage.setItem("name",loginC.name);
             alert("Login successful!");
             onClose();
             setLoginC({ name: "", password: "" });
@@ -250,6 +251,7 @@ const AuthSidebar = ({ isOpen, onClose }) => {
             await axios.post("http://localhost:8003/action/api/users/addinguser", formData);
             alert("Registration successful! Please login.");
             setIsLogin(true);
+            setFormData("");
             setError(""); // Clear any previous errors
         } catch (err) {
             if (err.response && err.response.data && err.response.data.error) {
