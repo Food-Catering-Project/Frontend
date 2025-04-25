@@ -21,7 +21,7 @@ const Home = () => {
       <TasteDifference />
       {/* <RestaurantList /> */}
        {/* <Menu/> */}
-       <RestaurantFinalList/>
+      <RestaurantFinalList/>
        {/* <Cart/> */}
        <CustomerFeedback/>
        <CateringOrder/>

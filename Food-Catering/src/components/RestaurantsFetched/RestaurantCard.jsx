@@ -21,7 +21,7 @@ const RestaurantCard = ({ restaurants }) => {
     return (
       <div className="relative w-full">
   
-        <div className="flex items-center ">
+        <div className="flex items-center  ">
           <button
             onClick={scrollLeft}
             className="p-2 bg-gray-200 rounded-full hover:bg-gray-300 mr-2"

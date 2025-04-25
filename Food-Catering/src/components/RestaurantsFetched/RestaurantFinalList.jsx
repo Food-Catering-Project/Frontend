@@ -15,7 +15,7 @@ const RestaurantListPage = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-6 ">
+    <div className="container mx-auto px-4 py-6 ">    
       {restaurants.length > 0 ? (
         <RestaurantCard restaurants={restaurants} />
       ) : (
