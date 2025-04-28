@@ -10,7 +10,8 @@ import TasteDifference from "../components/TasteDifference";
 import CustomerFeedback from "../components/CustomerFeedback";
 import CateringOrder from "../components/CateringOrder";
 import MapComponent from "../components/MapComponent";
-// import Cart from "../components/RestaurantsFetched/Cart";
+import CartSidebar from "../components/RestaurantsFetched/CartSidebar";
+// import FloatingCartButton from "../components/RestaurantsFetched/FloatingCartButton";
 
 const Home = () => {
   return (
@@ -22,7 +23,8 @@ const Home = () => {
       {/* <RestaurantList /> */}
        {/* <Menu/> */}
       <RestaurantFinalList/>
-       {/* <Cart/> */}
+      <CartSidebar/>
+      {/* <FloatingCartButton/> */}
        <CustomerFeedback/>
        <CateringOrder/>
        <MapComponent/>

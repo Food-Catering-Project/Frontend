@@ -13,7 +13,8 @@ import AboutUs from "./pages/AboutUs";
 import Offer from "./pages/Offer";
 import RestaurantRegister from "./pages/Admin/RestaurantRegister";
 import RestaurantDetails from "./components/RestaurantsFetched/RestaurantDetails";
-// import Checkout from "./pages/Checkout";
+import CartSidebar  from  "./components/RestaurantsFetched/CartSidebar";
+import OrderPlaced from "./pages/OrderPlaced";
 
 function App() {
   return (
@@ -31,7 +32,7 @@ function App() {
         <Route path="/birthday-party-catering" element={<BirthdayPartyCatering />} />
         <Route path="/corporate-catering" element={<CorporateCatering />} />
         <Route path="/any-other-occasion" element={<AnyOtherOccasion />} />
-        {/* <Route path="/checkout" element={<Checkout/>}/> */}
+        <Route path="/order-placed" element={<OrderPlaced/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
