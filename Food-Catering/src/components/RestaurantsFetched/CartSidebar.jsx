@@ -5,6 +5,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { increaseQuantity, decreaseQuantity, removeFromCart, toggleCart, clearCart } from '../../redux/cartSlice';
 import { useNavigate } from 'react-router-dom';
 import { X } from 'lucide-react'; //( lucide-react )
+import { FaTrash } from "react-icons/fa";
+
 
 const CartSidebar = () => {
   const { cartItems, isCartOpen } = useSelector((state) => state.cart);
@@ -45,10 +47,10 @@ const CartSidebar = () => {
                   <p className="text-sm text-gray-500">₹{item.price} x {item.quantity}</p>
                   <p className="text-sm font-semibold">₹{item.totalPrice}</p>
                 </div>
-                <div className="flex flex-col items-center gap-2">
+                <div className="flex flex-col items-center gap-1">
                   <button onClick={() => dispatch(increaseQuantity(item.menuId))} className="px-2 py-1 bg-green-500 text-white rounded">+</button>
                   <button onClick={() => dispatch(decreaseQuantity(item.menuId))} className="px-2 py-1 bg-red-500 text-white rounded">-</button>
-                  <button onClick={() => dispatch(removeFromCart(item.menuId))} className="text-red-500 text-xs underline">Remove</button>
+                  <button onClick={() => dispatch(removeFromCart(item.menuId))} className="text-red-500 text-xs underline">remove</button>
                 </div>
               </div>
             ))}
