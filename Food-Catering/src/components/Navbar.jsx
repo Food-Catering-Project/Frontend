@@ -20,8 +20,9 @@ const Navbar = () => {
 
     useEffect(() => {
         const token = localStorage.getItem("token");
+        const logginUser = localStorage.getItem("name");
         if (token) {
-            setUser("User"); // Replace with actual API call to get username
+            setUser(logginUser); // Replace with actual API call to get username
         }
     }, []);
 
